@@ -13,77 +13,77 @@ Coding Project - Third Phase. Compilers course - 2015. Federal University of Sã
 
 - body ::= [dclpart] compstmt
 	
- - dclpart ::= VAR dcls [subdcls] | subdcls
+- dclpart ::= VAR dcls [subdcls] | subdcls
   
- - dcls ::= dcl {dcl}
+- dcls ::= dcl {dcl}
   
- - dcl ::= idlist ’:’ type ’;’
+- dcl ::= idlist ’:’ type ’;’
 
- - idlist ::= id {’,’ id}
+- idlist ::= id {’,’ id}
 
- - type ::= stdtype | arraytype
+- type ::= stdtype | arraytype
 
- - stdtype ::= INTEGER | REAL | CHAR | STRING
+- stdtype ::= INTEGER | REAL | CHAR | STRING
  
- - arraytype ::= ARRAY ’[’ intnum ’..’ intnum ’]’ OF stdtype
+- arraytype ::= ARRAY ’[’ intnum ’..’ intnum ’]’ OF stdtype
 
- - subdcls ::= subdcl {subdcl}
+- subdcls ::= subdcl {subdcl}
 
- - subdcl ::= subhead ’;’ body ’;’
+- subdcl ::= subhead ’;’ body ’;’
 
- - subhead ::= FUNCTION pid args ’:’ stdtype | PROCEDURE pid args
+- subhead ::= FUNCTION pid args ’:’ stdtype | PROCEDURE pid args
 
- - args ::= ’(’ [dcls] ’)’
+- args ::= ’(’ [dcls] ’)’
 
- - compstmt ::= BEGIN stmts END
+- compstmt ::= BEGIN stmts END
 
- - stmts ::= stmt {’;’ stmt} ’;’
+- stmts ::= stmt {’;’ stmt} ’;’
 
-- stmt ::= ifstmt | whilestmt | assignstmt | compstmt | readstmt | writestmt | writelnstmt | returnstmt | procfuncstmt
+ stmt ::= ifstmt | whilestmt | assignstmt | compstmt | readstmt | writestmt | writelnstmt | returnstmt | procfuncstmt
   
- - ifstmt ::= IF expr THEN stmts [ELSE stmts] ENDIF
+- ifstmt ::= IF expr THEN stmts [ELSE stmts] ENDIF
   
- - whilestmt ::= WHILE expr DO stmts ENDWHILE
+- whilestmt ::= WHILE expr DO stmts ENDWHILE
 
- - assignstmt ::= vbl ’:=’ expr
+- assignstmt ::= vbl ’:=’ expr
 
- - readstmt ::= READ ’(’ vblist ’)’
+- readstmt ::= READ ’(’ vblist ’)’
 
- - writestmt ::= WRITE ’(’ exprlist ’)’
+- writestmt ::= WRITE ’(’ exprlist ’)’
 
- - writelnstmt ::= WRITELN ’(’ [exprlist] ’)’
+- writelnstmt ::= WRITELN ’(’ [exprlist] ’)’
 
- - returnstmt ::= RETURN [expr]
+- returnstmt ::= RETURN [expr]
 
- - procfuncstmt ::= pid ’(’ [exprlist] ’)’
+- procfuncstmt ::= pid ’(’ [exprlist] ’)’
 
- - vblist ::= vbl {’,’ vbl}
+- vblist ::= vbl {’,’ vbl}
 
-  - vbl ::= id [’[’ expr ’]’]
+ - vbl ::= id [’[’ expr ’]’]
 
- - exprlist ::= expr {’,’ expr}
+- exprlist ::= expr {’,’ expr}
 
- - expr ::= simexp [relop expr]
+- expr ::= simexp [relop expr]
 
- - simexp ::= [unary] term {addop term}
+- simexp ::= [unary] term {addop term}
 
- - term ::= factor {mulop factor}
+- term ::= factor {mulop factor}
 
- - factor ::= vbl | num | ’(’ expr ’)’ | ’"’.’"’ | procfuncstmt
+- factor ::= vbl | num | ’(’ expr ’)’ | ’"’.’"’ | procfuncstmt
 
- - id ::= letter {letter | digit}
+- id ::= letter {letter | digit}
 
- - pid ::= letter {letter | digit}
+- pid ::= letter {letter | digit}
 
- - num ::= intnum [’.’ intnum]
+- num ::= intnum [’.’ intnum]
 
- - intnum ::= digit {digit}
+- intnum ::= digit {digit}
 
- - relop ::= ’=’ | ’<’ | ’>’ | ’<=’ | ’>=’ | ’<>’
+- relop ::= ’=’ | ’<’ | ’>’ | ’<=’ | ’>=’ | ’<>’
 
- - addop ::= ’+’ | ’-’ | OR
+- addop ::= ’+’ | ’-’ | OR
 
- - mulop ::= ’*’ | ’/’ | AND | MOD | DIV
+- mulop ::= ’*’ | ’/’ | AND | MOD | DIV
 
- - unary ::= ’+’ | ’-’ | NOT
+- unary ::= ’+’ | ’-’ | NOT
 ```
